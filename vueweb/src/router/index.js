@@ -9,7 +9,7 @@ export default new Router({
     {
       path: '*',
       redirect: '/main',
-      component: () => import('@/home/index')
+      component: () => import('@/pages/main')
     },
     {
       name: '首页',
@@ -17,7 +17,7 @@ export default new Router({
       component: () => import('@/pages/main')
     },
     {
-      name: '菜单',
+      name: '技能',
       path: '/menu',
       component: () => import('@/pages/menu')
     },

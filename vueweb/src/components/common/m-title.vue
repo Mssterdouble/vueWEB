@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'm-panel',
+  name: 'm-title',
   props: {
     title: {
       type: String
@@ -25,14 +25,15 @@ export default {
 .page {
   display: flex;
   justify-content: center;
-  background: #f7f8f9;
+  background: red;
 
   &-title {
+    margin-top: 15px;
     display: flex;
     align-items: center;
-    color: red;
+    color: black;
     height: 30px;
-    font-size: 14px;
+    font-size: 24px;
   }
 }
 </style>

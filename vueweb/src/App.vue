@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <div class="titleBar">{{title}}</div>
+  <div class="panel">
     <router-view />
     <div class="footer">
       <router-link class="footer-tab" to='/main'>首页</router-link>
@@ -15,13 +14,20 @@ export default {
   name: 'App',
   data () {
     return {
-      title: '标题'
     }
   }
 }
 </script>
 
 <style lang="less" scope>
+html,
+body {
+  height: 100%;
+}
+.panel {
+  background-color: #f7f8f9;
+  height: 100%;
+}
 .titleBar {
   display: flex;
   align-items: center;
@@ -36,7 +42,7 @@ export default {
 }
 
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   height: 30px;

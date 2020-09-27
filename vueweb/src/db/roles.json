@@ -1,0 +1,36 @@
+[
+  {
+    "type": "warrior",
+    "show": "战士"
+  },
+  {
+    "type": "kinight",
+    "show": "侠客",
+    "gift": []
+  },
+  {
+    "type": "mage",
+    "show": "法师",
+    "gift": []
+  },
+  {
+    "type": "comprehend",
+    "show": "修真",
+    "gift": []
+  },
+  {
+    "type": "sage",
+    "show": "贤者",
+    "gift": []
+  },
+  {
+    "type": "takebu",
+    "show": "武圣",
+    "gift": []
+  },
+  {
+    "type": "gunking",
+    "show": "枪王",
+    "gift": []
+  }
+]
