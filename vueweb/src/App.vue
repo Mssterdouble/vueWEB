@@ -1,12 +1,25 @@
 <template>
-  <div class="panel">
-    <router-view />
-    <div class="footer">
-      <router-link class="footer-tab" to='/main'>首页</router-link>
-      <router-link class="footer-tab" to='/menu'>菜单</router-link>
-      <router-link class="footer-tab" to='/mine'>我的</router-link>
-    </div>
-  </div>
+  <el-container>
+    <el-main>
+      <slot class="pgh">
+        <router-view />
+
+      </slot>
+    </el-main>
+    <el-footer>
+      <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+        <el-menu-item index="1">
+          <router-link to='/main'>首页</router-link>
+        </el-menu-item>
+        <el-menu-item index="2">
+          <router-link to='/menu'>菜单</router-link>
+        </el-menu-item>
+        <el-menu-item index="3">
+          <router-link to='/mine'>我的</router-link>
+        </el-menu-item>
+      </el-menu>
+    </el-footer>
+  </el-container>
 </template>
 
 <script>
@@ -20,53 +33,37 @@ export default {
 </script>
 
 <style lang="less" scope>
-html,
-body {
-  height: 100%;
+a:link {
+  text-decoration: none;
 }
-.panel {
-  background-color: #f7f8f9;
-  height: 100%;
-}
-.titleBar {
-  display: flex;
-  align-items: center;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  justify-content: center;
-  color: #2c3e50;
-  height: 30px;
-  line-height: 28px;
-  background: #f7f8f9;
-}
-
-.footer {
+.el-footer {
   position: fixed;
-  bottom: 0;
   width: 100%;
-  height: 30px;
-  background: #f7f8f9;
-  display: flex;
-  justify-content: space-evenly;
+  bottom: 0px;
+  color: #333;
+  text-align: center;
+  padding: 0;
+  height: 5vh;
+  border-top: 1px #333;
+}
 
-  &-tab {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex: 1 1 auto;
-  }
-  &-tab:focus {
-    background: gray;
-  }
+.el-main {
+  height: 95vh;
+  color: #333;
+  text-align: center;
 }
-a {
-  text-decoration: none;
+
+body > .el-container {
+  display: flex;
 }
-a:active {
-  background: #ffffff;
+
+.el-menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
-.router-link-active {
-  text-decoration: none;
+
+/deep/ .is-active {
+  flex: 0.33 1 auto;
 }
 </style>

@@ -1,8 +1,4 @@
 <template>
-  <div>
-    <m-title title="我的"></m-title>
-    <button @click="click"> click</button>
-  </div>
 
 </template>
 

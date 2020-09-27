@@ -4,9 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import plugins from "@/components/common/index"
-import '@/assets/iconfont/iconfont.css'
+import '@/assets/iconfont/iconfont'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.use(plugins)
+Vue.use(ElementUI);
 
 Vue.config.productionTip = false
 
