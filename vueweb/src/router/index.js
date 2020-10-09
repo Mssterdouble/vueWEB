@@ -17,9 +17,9 @@ export default new Router({
       component: () => import('@/pages/main')
     },
     {
-      name: '技能',
-      path: '/menu',
-      component: () => import('@/pages/menu')
+      name: '介绍',
+      path: '/game',
+      component: () => import('@/pages/game')
     },
     {
       name: '我的',

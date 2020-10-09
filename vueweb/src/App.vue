@@ -1,25 +1,22 @@
 <template>
-  <el-container>
-    <el-main>
-      <slot class="pgh">
+  <div>
+    <div class="pg">
+      <div class="pg-main">
         <router-view />
-
-      </slot>
-    </el-main>
-    <el-footer>
-      <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-        <el-menu-item index="1">
+      </div>
+      <div class="pg-ftr">
+        <div class="pg-ftr-itm">
           <router-link to='/main'>首页</router-link>
-        </el-menu-item>
-        <el-menu-item index="2">
-          <router-link to='/menu'>菜单</router-link>
-        </el-menu-item>
-        <el-menu-item index="3">
+        </div>
+        <div class="pg-ftr-itm">
+          <router-link to='/game'>介绍</router-link>
+        </div>
+        <div class="pg-ftr-itm">
           <router-link to='/mine'>我的</router-link>
-        </el-menu-item>
-      </el-menu>
-    </el-footer>
-  </el-container>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -36,34 +33,25 @@ export default {
 a:link {
   text-decoration: none;
 }
-.el-footer {
-  position: fixed;
-  width: 100%;
-  bottom: 0px;
-  color: #333;
-  text-align: center;
-  padding: 0;
-  height: 5vh;
-  border-top: 1px #333;
-}
+.pg {
+  &-main {
+    height: 95vh;
+    overflow: auto;
+  }
 
-.el-main {
-  height: 95vh;
-  color: #333;
-  text-align: center;
-}
-
-body > .el-container {
-  display: flex;
-}
-
-.el-menu {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-/deep/ .is-active {
-  flex: 0.33 1 auto;
+  &-ftr {
+    position: fixed;
+    bottom: 0;
+    height: 5vh;
+    line-height: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    border-top: 1px gray solid;
+    &-itm {
+      align-items: center;
+      text-align: center;
+    }
+  }
 }
 </style>
