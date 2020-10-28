@@ -7,6 +7,9 @@
     </el-carousel>
     <el-button @click="getMthd">默认按钮</el-button>
     <div>{{info}}</div>
+    <div>
+      <video src="https://www.bilibili.com/video/av13847696?spm_id_from=333.338.__bofqi.19"></video>
+    </div>
   </div>
 </template>
 
