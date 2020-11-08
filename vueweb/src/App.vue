@@ -1,10 +1,20 @@
 <template>
-  <div class="panel">
-    <router-view />
-    <div class="footer">
-      <router-link class="footer-tab" to='/main'>首页</router-link>
-      <router-link class="footer-tab" to='/menu'>菜单</router-link>
-      <router-link class="footer-tab" to='/mine'>我的</router-link>
+  <div>
+    <div class="pg">
+      <div class="pg-main">
+        <router-view />
+      </div>
+      <div class="pg-ftr">
+        <div class="pg-ftr-itm">
+          <router-link to='/main'>首页</router-link>
+        </div>
+        <div class="pg-ftr-itm">
+          <router-link to='/game'>介绍</router-link>
+        </div>
+        <div class="pg-ftr-itm">
+          <router-link to='/mine'>我的</router-link>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -20,53 +30,28 @@ export default {
 </script>
 
 <style lang="less" scope>
-html,
-body {
-  height: 100%;
+a:link {
+  text-decoration: none;
 }
-.panel {
-  background-color: #f7f8f9;
-  height: 100%;
-}
-.titleBar {
-  display: flex;
-  align-items: center;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  justify-content: center;
-  color: #2c3e50;
-  height: 30px;
-  line-height: 28px;
-  background: #f7f8f9;
-}
+.pg {
+  &-main {
+    height: 95vh;
+    overflow: auto;
+  }
 
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 30px;
-  background: #f7f8f9;
-  display: flex;
-  justify-content: space-evenly;
-
-  &-tab {
+  &-ftr {
+    position: fixed;
+    bottom: 0;
+    height: 5vh;
+    line-height: 5vh;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    flex: 1 1 auto;
+    width: 100%;
+    border-top: 1px gray solid;
+    &-itm {
+      align-items: center;
+      text-align: center;
+    }
   }
-  &-tab:focus {
-    background: gray;
-  }
-}
-a {
-  text-decoration: none;
-}
-a:active {
-  background: #ffffff;
-}
-.router-link-active {
-  text-decoration: none;
 }
 </style>

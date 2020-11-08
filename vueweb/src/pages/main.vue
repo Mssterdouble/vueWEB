@@ -1,6 +1,5 @@
 <template>
   <div class="panel">
-    <m-title title="世界OL"></m-title>
     <div class="panel-img">
       <img class="panel-img-jpeg" src="@/assets/image/world.jpeg" />
     </div>
@@ -17,7 +16,6 @@
 
 <style lang="less" scoped>
 .panel {
-  height: 100%;
   display: flex;
   flex-direction: column;
 
