@@ -7,15 +7,12 @@ import plugins from "@/components/common/index"
 import '@/assets/iconfont/iconfont'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import axios from 'axios'
-import VueAxios from 'vue-axios'
-import myaxios from '@/plugin/axios'
+import zglAxios from '@/plugin/axios'
 
 Vue.use(plugins)
 Vue.use(ElementUI);
-Vue.use(VueAxios, axios)
-Vue.use(myaxios)
 
+Vue.prototype.zglAxios=zglAxios;
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

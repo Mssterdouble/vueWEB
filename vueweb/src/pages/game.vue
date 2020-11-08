@@ -19,7 +19,6 @@
         <div class="panel-menu-docker">
           <div class="panel-menu-docker-item" v-for="(item, index) in roles" :key='index'>
             <img class="img" :src="item.icon" />
-            <!-- <img class=" img" src="@/assets/image/roles/gunking.png" /> -->
             <p class="lb">{{item.type}}</p>
           </div>
         </div>
@@ -33,13 +32,13 @@ export default {
   data () {
     return {
       roles: [
-        { type: '修真', icon: 'comprehend.png', link: 'comperhend' },
-        { type: '枪王', icon: '@/assets/image/roles/gunking.png', link: 'gunking' },
-        { type: '侠客', icon: '@/assets/image/roles/kinight.png', link: 'kinight' },
-        { type: '法师', icon: '@/assets/image/roles/mage.png', link: 'mage' },
-        { type: '贤者', icon: '@/assets/image/roles/sage.png', link: 'sage' },
-        { type: '武圣', icon: '@/assets/image/roles/takebu.png', link: 'takebu' },
-        { type: '战士', icon: '@/assets/image/roles/warrior.png', link: 'warrior' }
+        { type: '修真', icon: require('@/assets/image/roles/comprehend.png'), link: 'comperhend' },
+        { type: '枪王', icon: require('@/assets/image/roles/gunking.png'), link: 'gunking' },
+        { type: '侠客', icon: require('@/assets/image/roles/kinight.png'), link: 'kinight' },
+        { type: '法师', icon: require('@/assets/image/roles/mage.png'), link: 'mage' },
+        { type: '贤者', icon: require('@/assets/image/roles/sage.png'), link: 'sage' },
+        { type: '武圣', icon: require('@/assets/image/roles/takebu.png'), link: 'takebu' },
+        { type: '战士', icon: require('@/assets/image/roles/warrior.png'), link: 'warrior' }
       ]
     }
   },

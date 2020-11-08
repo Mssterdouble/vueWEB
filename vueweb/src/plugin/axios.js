@@ -1,13 +1,26 @@
-const localUrl = 'http://localhost:8080/static/1.txt'
-let myaxios = {
-  query () {
-    Vue.axios.get(localUrl)
+import Axios from 'axios'
+Axios.defaults.baseURL = '/zglServer'
+Axios.defaults.headers.post['Content-Type'] = 'application/json'
+const myaxios = {
+  query (localUrl,requestParam) {
+    // console.log('p', this.toParams(requestParam))
+    // let a = localUrl + this.toParams(requestParam)
+    return Axios.get(localUrl, requestParam)
     .then(response => {
-      console.log(response)
+      return response.data
     })
     .catch(function (error) { // 请求失败处理
-      console.log(error)
+      return error
     })
+  },
+  toParams(param) {
+    var result = ""
+    for (let name in param) {
+      result += "&" + name + "=" + encodeURIComponent(param[name])
+    }
+    return '?' + result.substring(1)
   }
 }
+
+
 export default myaxios 

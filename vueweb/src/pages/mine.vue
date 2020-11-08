@@ -7,8 +7,8 @@
     </el-carousel>
     <el-button @click="getMthd">默认按钮</el-button>
     <div>{{info}}</div>
-    <div>
-      <video src="https://www.bilibili.com/video/av13847696?spm_id_from=333.338.__bofqi.19"></video>
+    <div @click="clickVideo">
+      <video class="videoclass" src="../assets/video/111.mp4" autoplay loop muted></video>
     </div>
   </div>
 </template>
@@ -18,21 +18,27 @@ export default {
   data () {
     return {
       ads: [
-        { type: '法师', icon: '@/assets/image/roles/mage.png', link: 'mage' },
-        { type: '贤者', icon: '@/assets/image/roles/sage.png', link: 'sage' },
-        { type: '武圣', icon: '@/assets/image/roles/takebu.png', link: 'takebu' },
-        { type: '战士', icon: '@/assets/image/roles/warrior.png', link: 'warrior' }
+        { type: '法师', icon: require('../assets/image/roles/mage.png'), link: 'mage' },
+        { type: '贤者', icon: require('../assets/image/roles/sage.png'), link: 'sage' },
+        { type: '武圣', icon: require('../assets/image/roles/takebu.png'), link: 'takebu' },
+        { type: '战士', icon: require('../assets/image/roles/warrior.png'), link: 'warrior' }
       ],
       info: ''
     }
   },
+  beforeMount () {
 
+  },
   methods: {
-    getMthd () {
-      // created:vue生命周期中的钩子函数，在这个时间点，data中的数据已经注入到响应式系统中
-      //http://localhost:8080/static/1.txt
-      //https://www.runoob.com/try/ajax/json_demo.json
-      this.myaxios.query()
+    clickVideo () {
+      console.log('dianjiwo ')
+    },
+    async getMthd () {
+      let requestParams = { name: 'tomm', url: 'www.baidu.com' }
+      let da = await this.zglAxios.query('/testconsolog', requestParams)
+      console.log(da.name)
+      // let par = JSON.parse(da)
+      // console.log('da', par)
     }
   }
 }
@@ -53,5 +59,9 @@ export default {
 
 .el-carousel__item:nth-child(2n + 1) {
   background-color: #d3dce6;
+}
+
+.videoclass {
+  height: 300px;
 }
 </style>
