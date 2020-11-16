@@ -15,14 +15,26 @@
       </div>
 
       <div class="panel-menu">
+        <el-carousel height="150px">
+          <el-carousel-item v-for="(item,index) in ads" :key="index">
+            <img class="carimg" :src="item.icon" />
+          </el-carousel-item>
+        </el-carousel>
+      </div>
+      <div class="panel-menu">
+        <div class="panel-menu-title">副本攻略</div>
+        <m-list title="主题" des="描述" :isLink='true' @onclick="jumpAct"></m-list>
+      </div>
+      <div class="panel-menu">
         <div class="panel-menu-title">人物技能 </div>
         <div class="panel-menu-docker">
-          <div class="panel-menu-docker-item" v-for="(item, index) in roles" :key='index'>
+          <div class="panel-menu-docker-item" v-for="(item, index) in roles" :key='index' @click="gotoRoles(item)">
             <img class="img" :src="item.icon" />
             <p class="lb">{{item.type}}</p>
           </div>
         </div>
       </div>
+
     </el-main>
   </el-container>
 </template>
@@ -39,9 +51,24 @@ export default {
         { type: '贤者', icon: require('@/assets/image/roles/sage.png'), link: 'sage' },
         { type: '武圣', icon: require('@/assets/image/roles/takebu.png'), link: 'takebu' },
         { type: '战士', icon: require('@/assets/image/roles/warrior.png'), link: 'warrior' }
-      ]
+      ],
+      ads: [
+        { type: '法师', icon: require('../assets/image/roles/mage.png'), link: 'mage' },
+        { type: '贤者', icon: require('../assets/image/roles/sage.png'), link: 'sage' },
+        { type: '武圣', icon: require('../assets/image/roles/takebu.png'), link: 'takebu' },
+        { type: '战士', icon: require('../assets/image/roles/warrior.png'), link: 'warrior' }
+      ],
     }
   },
+  methods: {
+    jumpAct ($event) {
+      console.log(event.target.value)
+    },
+    gotoRoles (item) {
+      this.zglRouter.push('Mine', { name: 'to,' })
+      console.log(item)
+    }
+  }
 };
 </script>
 
@@ -114,5 +141,8 @@ export default {
 .grid-content {
   border-radius: 4px;
   min-height: 36px;
+}
+.carimg {
+  align-items: center;
 }
 </style>

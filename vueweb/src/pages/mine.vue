@@ -27,7 +27,8 @@ export default {
     }
   },
   beforeMount () {
-
+    let params = this.zglUtils.getUrlQuaryParams()
+    console.log('params', params)
   },
   methods: {
     clickVideo () {

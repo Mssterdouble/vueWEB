@@ -9,23 +9,28 @@ export default new Router({
   routes: [
     {
       path: '*',
-      redirect: '/main',
+      redirect: '/Main',
       component: () => import('@/pages/main')
     },
     {
-      name: '首页',
+      name: 'Main',
       path: '/main',
       component: () => import('@/pages/main')
     },
     {
-      name: '介绍',
+      name: 'Intrduce',
       path: '/game',
       component: () => import('@/pages/game')
     },
     {
-      name: '我的',
+      name: 'Mine',
       path: '/mine',
       component: () => import('@/pages/mine')
+    },
+    {
+      name: 'Test',
+      path: '/test',
+      component: () => import('@/pages/test')
     }
   ]
 })
