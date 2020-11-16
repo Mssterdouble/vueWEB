@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div @click="goback"> goback</div>
     <el-carousel height="150px">
       <el-carousel-item v-for="(item,index) in ads" :key="index">
         <img :src="item.icon" />
@@ -27,10 +28,13 @@ export default {
     }
   },
   beforeMount () {
-    let params = this.zglUtils.getUrlQuaryParams()
+    let params = this.mUtils.getUrlQuaryParams()
     console.log('params', params)
   },
   methods: {
+    goback () {
+      this.mRouter.goback()
+    },
     clickVideo () {
       console.log('dianjiwo ')
     },

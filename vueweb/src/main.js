@@ -7,16 +7,16 @@ import plugins from "@/components/common/index"
 import './assets/iconfont/iconfont'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import zglAxios from '@/plugin/axios'
-import zglRouter from '@/plugin/route'
-import zglUtils from '@/plugin/utils'
+import mAxios from '@/plugin/axios'
+import mRouter from '@/plugin/route'
+import mUtils from '@/plugin/utils'
 
 Vue.use(plugins)
 Vue.use(ElementUI);
 
-Vue.prototype.zglAxios=zglAxios;
-Vue.prototype.zglRouter=zglRouter;
-Vue.prototype.zglUtils=zglUtils;
+Vue.prototype.mAxios=mAxios;
+Vue.prototype.mRouter=mRouter;
+Vue.prototype.mUtils=mUtils;
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

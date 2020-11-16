@@ -65,7 +65,7 @@ export default {
       console.log(event.target.value)
     },
     gotoRoles (item) {
-      this.zglRouter.push('Mine', { name: 'to,' })
+      this.mRouter.push('Mine', item)
       console.log(item)
     }
   }

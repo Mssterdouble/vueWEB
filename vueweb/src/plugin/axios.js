@@ -1,7 +1,7 @@
 import Axios from 'axios'
 Axios.defaults.baseURL = '/zglServer'
 Axios.defaults.headers.post['Content-Type'] = 'application/json'
-const myaxios = {
+const mAxios = {
   query (localUrl,requestParam) {
     // console.log('p', this.toParams(requestParam))
     // let a = localUrl + this.toParams(requestParam)
@@ -23,4 +23,4 @@ const myaxios = {
 }
 
 
-export default myaxios 
+export default mAxios 

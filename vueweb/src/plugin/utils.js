@@ -1,9 +1,9 @@
 import Vue from '../main'
 
-const utils = {
+const mUtils = {
   getUrlQuaryParams () {
     return Vue.$route.params
   }
 }
 
-export default utils
+export default mUtils
