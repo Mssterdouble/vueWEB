@@ -1,4 +1,5 @@
 <template>
+  <!-- <m-page :title="首页"> -->
   <div class="panel">
     <div class="panel-img">
       <img class="panel-img-jpeg" src="@/assets/image/world.jpeg" />
@@ -12,6 +13,8 @@
       </p>
     </div>
   </div>
+  <!-- </m-page> -->
+
 </template>
 
 <style lang="less" scoped>
