@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <m-page>
     <div @click="goback"> goback</div>
     <el-carousel height="150px">
       <el-carousel-item v-for="(item,index) in ads" :key="index">
@@ -11,7 +11,7 @@
     <div @click="clickVideo">
       <video class="videoclass" src="../assets/video/111.mp4" autoplay loop muted></video>
     </div>
-  </div>
+  </m-page>
 </template>
 
 <script>

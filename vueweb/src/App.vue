@@ -47,7 +47,8 @@ a:link {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    border-top: 1px gray solid;
+    // border-top: 1px gray solid;
+    background-color: #f7f8f9;
     &-itm {
       align-items: center;
       text-align: center;

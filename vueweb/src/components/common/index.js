@@ -7,6 +7,6 @@ function plugins (Vue) {
   Vue.component('m-title', MTitle)
   Vue.component('m-search', MSearch)
   Vue.component('m-list', MList)
-  Vue.component('m-page', MList)
+  Vue.component('m-page', MPage)
 }
 export default plugins
