@@ -69,7 +69,7 @@ export default {
     }
   },
   beforeMount () {
-    console.log(this.mUtils.getUrlQuaryParams())
+    console.log(this.mRouter.getNavigatorParams())
   },
   methods: {
     jumpAct ($event) {
@@ -82,6 +82,9 @@ export default {
     },
     strategies () {
       this.mRouter.push('Strategies', { type: 'list' })
+    },
+    peopleRoles () {
+      console.log('sdfhkj')
     }
   }
 };

@@ -35,6 +35,11 @@ const mRouters = [
     component: () => import('@/pages/strategies')
   },
   {
+    name: 'Actives',
+    path: '/Actives',
+    component: () => import('@/pages/actives')
+  },
+  {
     name: 'ContralPanel.Index',
     path: '/ContralPanel.Index',
     component: () => import('@/pages/contralPanel/index')

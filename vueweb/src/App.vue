@@ -6,13 +6,13 @@
       </div>
       <div class="pg-ftr">
         <div class="pg-ftr-itm">
-          <router-link to='/main'>首页</router-link>
+          <router-link to='/Main'>首页</router-link>
         </div>
         <div class="pg-ftr-itm">
-          <router-link to='/game'>介绍</router-link>
+          <router-link to='/Strategies'>攻略</router-link>
         </div>
         <div class="pg-ftr-itm">
-          <router-link to='/mine'>我的</router-link>
+          <router-link to='/Mine'>关于</router-link>
         </div>
       </div>
     </div>

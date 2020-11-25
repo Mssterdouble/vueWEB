@@ -12,12 +12,13 @@ import mRouter from '@/plugin/route'
 import mUtils from '@/plugin/utils'
 
 Vue.use(plugins)
-Vue.use(ElementUI);
+Vue.use(ElementUI)
 
-Vue.prototype.mAxios=mAxios;
-Vue.prototype.mRouter=mRouter;
-Vue.prototype.mUtils=mUtils;
+Vue.prototype.mAxios=mAxios
+Vue.prototype.mRouter=mRouter
+Vue.prototype.mUtils=mUtils
 Vue.config.productionTip = false
+
 
 /* eslint-disable no-new */
 const vue = new Vue({

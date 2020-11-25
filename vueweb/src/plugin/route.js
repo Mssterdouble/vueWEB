@@ -1,4 +1,5 @@
 import Router from '../router'
+import Vue from '../main'
 
 const mRouter = {
   push (routerName,param) {
@@ -9,6 +10,9 @@ const mRouter = {
   },
   goback () {
     Router.back(-1)
+  },
+  getNavigatorParams () {
+    return Vue.$route.params
   }
 }
 export default mRouter

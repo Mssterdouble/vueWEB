@@ -5,7 +5,7 @@ const mAxios = {
   query (localUrl,requestParam) {
     // console.log('p', this.toParams(requestParam))
     // let a = localUrl + this.toParams(requestParam)
-    return Axios.get(localUrl, requestParam)
+    return Axios.post(localUrl, requestParam)
     .then(response => {
       return response.data
     })
@@ -21,6 +21,5 @@ const mAxios = {
     return '?' + result.substring(1)
   }
 }
-
 
 export default mAxios 
