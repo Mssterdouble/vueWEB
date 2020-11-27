@@ -17,6 +17,9 @@ export default {
     console.log(da.name)
 
     console.log(this.mUtils.encrpty('The quick brown fox jumps over the lazy dog'))
+    this.mUtils.clearSessionStorage()
+    const info = JSON.parse(window.sessionStorage.getItem('rowObj'))
+    console.log(info)
   },
   methods: {
 

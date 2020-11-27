@@ -9,10 +9,10 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
     proxyTable: {
       '/zglServer': {
-        target:'http://localhost:8090/zglServer/',
+        target:'http://120.48.20.18:8080/zglServer/',
         // secure: false, // 如果是https接口，需要配置这个参数
         changeOrigin:true,
         pathRewrite:{

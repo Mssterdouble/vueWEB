@@ -15,6 +15,21 @@ const mUtils = {
   // md5加密
   encrpty (str,key) {
     return mEncrpty(str + "" + key)
+  },
+
+  // session 存入
+  setSessionStorage (key, value) {
+    window.sessionStorage.setItem(key, JSON.stringify(value))
+  },
+
+  // session 读取
+  getSessionStorage (key) {
+    return JSON.parse(window.sessionStorage.getItem(key))
+  },
+
+  //清除sessionStorage 
+  clearSessionStorage () {
+    window.sessionStorage.clear()
   }
 }
 
