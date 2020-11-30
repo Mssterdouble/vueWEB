@@ -13,8 +13,8 @@ export default {
   },
   async beforeMount () {
     let requestParams = { name: 'tomm', url: 'www.baidu.com' }
-    let da = await this.mAxios.query('/testconsolog', requestParams)
-    console.log(da.name)
+    let da = await this.mAxios.query('/posts')
+    console.log('ret', da)
 
     console.log(this.mUtils.encrpty('The quick brown fox jumps over the lazy dog'))
     this.mUtils.clearSessionStorage()

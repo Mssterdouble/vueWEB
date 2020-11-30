@@ -1,11 +1,13 @@
 import Axios from 'axios'
-Axios.defaults.baseURL = '/zglServer'
+Axios.defaults.baseURL = ''
 Axios.defaults.headers.post['Content-Type'] = 'application/json'
 const mAxios = {
   query (localUrl,requestParam) {
     // console.log('p', this.toParams(requestParam))
     // let a = localUrl + this.toParams(requestParam)
-    return Axios.post(localUrl, requestParam)
+    console.log('localUrl', localUrl)
+    
+    return Axios.post('http://120.48.20.18:8081' + localUrl, requestParam)
     .then(response => {
       return response.data
     })
