@@ -10,13 +10,15 @@ import 'element-ui/lib/theme-chalk/index.css'
 import mAxios from '@/plugin/axios'
 import mRouter from '@/plugin/route'
 import mUtils from '@/plugin/utils'
-
+import mSQL from '@/db/server'
 Vue.use(plugins)
 Vue.use(ElementUI)
 
-Vue.prototype.mAxios=mAxios
-Vue.prototype.mRouter=mRouter
-Vue.prototype.mUtils=mUtils
+Vue.prototype.$mAxios=mAxios
+Vue.prototype.$mRouter=mRouter
+Vue.prototype.$mUtils=mUtils
+Vue.prototype.$mSQL=mSQL
+
 Vue.config.productionTip = false
 
 

@@ -18,7 +18,7 @@
         <div class="panel-menu">
           <el-carousel height="150px">
             <el-carousel-item v-for="(item,index) in ads" :key="index">
-              <img class="carimg" :src="item.icon" />
+              <img class="carimg" :src="item.icon" @click="gotoActives" />
             </el-carousel-item>
           </el-carousel>
         </div>
@@ -35,8 +35,8 @@
             <div class="panel-menu-title-more" @click="peopleRoles">更多</div>
           </div>
           <div class="panel-menu-docker">
-            <div class="panel-menu-docker-item" v-for="(item, index) in roles" :key='index' @click="gotoRoles(item)">
-              <img class="img" :src="item.icon" />
+            <div class="panel-menu-docker-item" :class="iconwidth" v-for="(item, index) in roles" :key='index' @click="gotoRoles(item)">
+              <img class="img" :class="iconwidth" :src="item.icon" />
               <p class="lb">{{item.type}}</p>
             </div>
           </div>
@@ -66,28 +66,42 @@ export default {
         { type: '武圣', icon: require('../assets/image/roles/takebu.png'), link: 'takebu' },
         { type: '战士', icon: require('../assets/image/activ/thanksgiven.jpg'), link: 'warrior' }
       ],
+      iconwidth: '50px'
     }
   },
+  beforeCreate () {
+    let winWidth
+    if (window.innerWidth) {
+      winWidth = window.innerWidth;
+    } else if ((document.body) && (document.body.clientWidth)) {
+      winWidth = document.body.clientWidth;
+    }
+    this.iconwidth = (winWidth - 40) / 8
+    console.log('winWidth', this.iconwidth)
+  },
   beforeMount () {
-    console.log(this.mRouter.getNavigatorParams())
+    console.log(this.$mRouter.getNavigatorParams())
   },
   methods: {
     jumpAct ($event) {
       console.log(event.target.value)
-      this.mRouter.push('Strategies', { type: 'detail', data: event.target.value })
+      this.$mRouter.push('Strategies', { type: 'detail', data: event.target.value })
 
+    },
+    gotoActives () {
+      this.$mRouter.push('Actives')
     },
     gotoRoles (item) {
       console.log(item)
     },
     strategies () {
-      this.mRouter.push('Strategies', { type: 'list' })
+      this.$mRouter.push('Strategies', { type: 'list' })
     },
     peopleRoles () {
       console.log('sdfhkj')
     }
   }
-};
+}
 </script>
 
 <style lang="less" scoped>
@@ -138,11 +152,9 @@ export default {
       display: flex;
       flex-wrap: wrap;
       align-content: flex-start;
-      justify-content: space-evenly;
       &-item {
         display: flex;
         flex: 0;
-        width: 50px;
         text-align: center;
         align-items: center;
         flex-direction: column;

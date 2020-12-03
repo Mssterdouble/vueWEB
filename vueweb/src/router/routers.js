@@ -43,6 +43,11 @@ const mRouters = [
     name: 'ContralPanel.Index',
     path: '/ContralPanel.Index',
     component: () => import('@/pages/contralPanel/index')
+  },
+  {
+    name: 'CiticTest',
+    path: '/CiticTest',
+    component: () => import('@/pages/citictest')
   }
 ]
 

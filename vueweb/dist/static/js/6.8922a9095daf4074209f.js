@@ -1,2 +1,0 @@
-webpackJsonp([6],{"7ILe":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r={data:function(){return{}},beforeMount:function(){console.log(this.mUtils.getUrlQuaryParams()),console.log("欢迎进入控制台")},methosd:{}},l={render:function(){var e=this.$createElement;return(this._self._c||e)("m-page",{attrs:{title:"控制台"}},[this._v("\n  世界OL盒子，内容管理台\n")])},staticRenderFns:[]},s=n("C7Lr")(r,l,!1,null,null,null);t.default=s.exports}});
-//# sourceMappingURL=6.8922a9095daf4074209f.js.map

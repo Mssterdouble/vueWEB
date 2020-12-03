@@ -12,14 +12,17 @@ export default {
     }
   },
   async beforeMount () {
-    let requestParams = { name: 'tomm', url: 'www.baidu.com' }
-    let da = await this.mAxios.query('/posts')
-    console.log('ret', da)
+    // let requestParams = { name: 'tomm', url: 'www.baidu.com' }
+    // let da = await this.mAxios.query('/posts')
+    // console.log('ret', da)
 
-    console.log(this.mUtils.encrpty('The quick brown fox jumps over the lazy dog'))
-    this.mUtils.clearSessionStorage()
-    const info = JSON.parse(window.sessionStorage.getItem('rowObj'))
-    console.log(info)
+    // console.log(this.mUtils.encrpty('The quick brown fox jumps over the lazy dog'))
+    // this.mUtils.clearSessionStorage()
+    // const info = JSON.parse(window.sessionStorage.getItem('rowObj'))
+    // console.log(info)
+
+    console.log(this.$mSQL.getAllAds())
+    console.log(this.$mSQL.getAdsBySize(0, 1, 0))
   },
   methods: {
 

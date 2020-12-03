@@ -1,2 +1,0 @@
-webpackJsonp([7],{wajO:function(e,t,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n={render:function(){var e=this.$createElement;return(this._self._c||e)("m-page",{attrs:{title:"活动"}})},staticRenderFns:[]},a=r("C7Lr")({data:function(){return{}},beforeCreate:function(){this.mRouter.getUrlQuaryParams()},methods:{}},n,!1,null,null,null);t.default=a.exports}});
-//# sourceMappingURL=7.a73d4ff264d7211989b0.js.map
