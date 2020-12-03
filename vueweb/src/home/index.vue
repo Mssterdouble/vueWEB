@@ -20,23 +20,23 @@ export default {
           if (navigator) {
             let rts = ROUTERS.filter(item => { return item.path && item.path !== '*' && item.path.indexOf(navigator) > 0 })
             if (rts.length) {
-              this.mRouter.replace(navigator, dataJson)
+              this.$mRouter.replace(navigator, dataJson)
               console.log('目标页面，' + navigator, dataJson)
             } else {
-              this.mRouter.replace('Main')
+              this.$mRouter.replace('Main')
             }
           } else {
-            this.mRouter.replace('Main')
+            this.$mRouter.replace('Main')
           }
         } catch (e) {
           console.error(e)
         }
 
       } else {
-        this.mRouter.replace('Main')
+        this.$mRouter.replace('Main')
       }
     } else {
-      this.mRouter.replace('Main')
+      this.$mRouter.replace('Main')
     }
   }
 }
