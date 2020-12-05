@@ -5,7 +5,7 @@ import mRouters from './routers'
 Vue.use(Router)
 
 export default new Router({
-  // mode: 'history',
+  mode: 'history',
   // mode: 'hash',
   routes: [
     ...mRouters

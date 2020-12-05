@@ -9,10 +9,10 @@
           <router-link to='/Main'>首页</router-link>
         </div>
         <div class="pg-ftr-itm">
-          <router-link to='/Strategies'>攻略</router-link>
+          <router-link to='/Strategies.Index'>攻略</router-link>
         </div>
         <div class="pg-ftr-itm">
-          <router-link to='/Mine'>关于</router-link>
+          <router-link to='/Mine.Index'>关于</router-link>
         </div>
       </div>
     </div>
@@ -37,6 +37,9 @@ a:link {
   &-main {
     height: 95vh;
     overflow: auto;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
   }
 
   &-ftr {
@@ -54,5 +57,10 @@ a:link {
       text-align: center;
     }
   }
+}
+.pg-main::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
 }
 </style>

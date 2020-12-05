@@ -10,7 +10,7 @@ const ACTS = [
       }
     ],
     actid: '',
-    status: ''
+    status: '1'
   }
 ]
 

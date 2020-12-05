@@ -85,20 +85,20 @@ export default {
   methods: {
     jumpAct ($event) {
       console.log(event.target.value)
-      this.$mRouter.push('Strategies', { type: 'detail', data: event.target.value })
+      this.$mRouter.push('Strategies.Index', { type: 'detail', data: event.target.value })
 
     },
     gotoActives () {
-      this.$mRouter.push('Actives')
+      this.$mRouter.push('Actives.Index')
     },
     gotoRoles (item) {
       console.log(item)
     },
     strategies () {
-      this.$mRouter.push('Strategies', { type: 'list' })
+      this.$mRouter.push('Strategies.Index', { type: 'list' })
     },
     peopleRoles () {
-      console.log('sdfhkj')
+      this.$mRouter.push('Propety.Heros', { type: 'list' })
     }
   }
 }

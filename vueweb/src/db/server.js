@@ -24,6 +24,9 @@ const SQL = {
       resultList: ads
     }
     return ret
+  },
+  getActives () {
+    
   }
 }
 // select * form tab where key=value limit 5

@@ -12,7 +12,6 @@
     </div>
   </div>
 </template>
-el-icon-arrow-left
 <script>
 export default {
   name: 'm-page',
@@ -34,7 +33,7 @@ export default {
   },
   methods: {
     goback () {
-      this.mRouter.goback()
+      this.$mRouter.goback()
     }
   }
 }
@@ -52,6 +51,9 @@ export default {
     height: 50px;
     align-items: center;
     justify-content: space-between;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     &-back {
       font-size: 28px;
       flex: 0 0 40px;

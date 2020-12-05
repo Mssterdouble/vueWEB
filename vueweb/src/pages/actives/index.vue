@@ -1,6 +1,6 @@
 <template>
   <m-page :title="title">
-    <div class="panel">
+    <div class="panel" v-for="(item,index) in 10" :key="index">
       <div class="panel-title">活动一</div>
       <div class="panel-time">时间</div>
       <div class="panel-zone">范围</div>

@@ -15,9 +15,14 @@ const mRouters = [
     component: () => import('@/pages/main')
   },
   {
-    name: 'Mine',
-    path: '/Mine',
-    component: () => import('@/pages/mine')
+    name: 'Mine.Index',
+    path: '/Mine.Index',
+    component: () => import('@/pages/mine/index')
+  },
+  {
+    name: 'Propety.Heros',
+    path: '/Propety.Heros',
+    component: () => import('@/pages/propety/heros')
   },
   {
     name: 'Test',
@@ -30,14 +35,14 @@ const mRouters = [
     component: () => import('@/pages/world')
   },
   {
-    name: 'Strategies',
-    path: '/Strategies',
-    component: () => import('@/pages/strategies')
+    name: 'Strategies.Index',
+    path: '/Strategies.Index',
+    component: () => import('@/pages/strategies/index')
   },
   {
-    name: 'Actives',
-    path: '/Actives',
-    component: () => import('@/pages/actives')
+    name: 'Actives.Index',
+    path: '/Actives.Index',
+    component: () => import('@/pages/actives/index')
   },
   {
     name: 'ContralPanel.Index',
