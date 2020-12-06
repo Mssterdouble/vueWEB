@@ -1,4 +1,12 @@
 import ADS from './tables/tb-ads'
+import HEROLIST from './tables/tb-heros'
+import COMPREHEND from './tables/tb-comprehend'
+import GUNKING from './tables/tb-gunking'
+import KINIGHT from './tables/tb-kinight'
+import MAGE from './tables/tb-mage'
+import SAGE from './tables/tb-sage'
+import TAKEBU from './tables/tb-takebu'
+import WARRIOR from './tables/tb-warrior'
 const SQL = {
 
   // 获取全部广告内容
@@ -27,6 +35,13 @@ const SQL = {
   },
   getActives () {
     
+  },
+  getHeroSkills (type) {
+    const HEROS = {COMPREHEND,GUNKING,KINIGHT,MAGE,SAGE,TAKEBU,WARRIOR}
+    return HEROS[type].gift
+  },
+  getHeroList () {
+    return HEROLIST
   }
 }
 // select * form tab where key=value limit 5

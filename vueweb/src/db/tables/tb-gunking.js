@@ -1,4 +1,4 @@
-{
+const GUNKING = {
   "type": "gunking",
   "show": "枪王",
   "gift": [
@@ -530,3 +530,4 @@
     }
   ]
 }
+export default GUNKING

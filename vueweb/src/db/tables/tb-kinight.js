@@ -1,4 +1,4 @@
-{
+const KINIGHT = {
   "type": "kinight",
   "show": "侠客",
   "gift": [
@@ -902,3 +902,5 @@
     }
   ]
 }
+
+export default KINIGHT

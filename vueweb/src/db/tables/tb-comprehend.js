@@ -1,4 +1,4 @@
-{
+const COMPREHEND = {
   "type": "comprehend",
   "show": "修真",
   "gift": [
@@ -778,3 +778,5 @@
     }
   ]
 }
+
+export default COMPREHEND

@@ -1,4 +1,4 @@
-{
+const WARRIOR = {
   "type": "warrior",
   "show": "战士",
   "gift": [
@@ -715,3 +715,5 @@
     }
   ]
 }
+
+export default WARRIOR

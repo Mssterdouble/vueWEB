@@ -1,4 +1,4 @@
-{
+const SAGE = {
   "type": "sage",
   "show": "贤者",
   "gift": [
@@ -588,3 +588,5 @@
     }
   ]
 }
+
+export default SAGE

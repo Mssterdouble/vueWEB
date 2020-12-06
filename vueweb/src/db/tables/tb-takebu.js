@@ -1,4 +1,4 @@
-{
+const TAKEBU = {
   "type": "takebu",
   "show": "武圣",
   "gift": [
@@ -422,3 +422,5 @@
     }
   ]
 }
+
+export default TAKEBU

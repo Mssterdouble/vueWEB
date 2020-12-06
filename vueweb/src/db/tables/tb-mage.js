@@ -1,4 +1,4 @@
-{
+const MAGE = {
   "type": "mage",
   "show": "法师",
   "gift": [
@@ -853,3 +853,5 @@
     }
   ]
 }
+
+export default MAGE
