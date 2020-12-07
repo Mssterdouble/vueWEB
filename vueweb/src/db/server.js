@@ -1,4 +1,5 @@
 import ADS from './tables/tb-ads'
+import ACTIVES from './tables/tb-actives'
 import HEROLIST from './tables/tb-heros'
 import COMPREHEND from './tables/tb-comprehend'
 import GUNKING from './tables/tb-gunking'
@@ -34,7 +35,7 @@ const SQL = {
     return ret
   },
   getActives () {
-    
+    return ACTIVES[0]
   },
   getHeroSkills (type) {
     const HEROS = {COMPREHEND,GUNKING,KINIGHT,MAGE,SAGE,TAKEBU,WARRIOR}

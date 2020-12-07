@@ -1,10 +1,11 @@
 <template>
   <m-page :title="title">
-    <div class="panel" v-for="(item,index) in 10" :key="index">
-      <div class="panel-title">活动一</div>
-      <div class="panel-time">时间</div>
-      <div class="panel-zone">范围</div>
-      <div class="panel-detail">内容<br>wenban</div>
+    <div class="panel" v-for="(item,index) in activeList" :key="index">
+      {{item}}
+      <div class="panel-title">{{item.title}}</div>
+      <div class="panel-time">{{item.time}}</div>
+      <div class="panel-zone">{{item.zone}}</div>
+      <div class="panel-detail">{{item.detail}}</div>
     </div>
   </m-page>
 </template>
@@ -13,11 +14,15 @@
 export default {
   data () {
     return {
-      title: '活动'
+      title: '活动',
+      activeList: []
     }
   },
   beforeCreate () {
-    console.log(this.$mRouter.getNavigatorParams())
+    // console.log(this.$mRouter.getNavigatorParams())
+    let ads = this.$mSQL.getActives()
+    this.activeList = ads.part
+    console.log(this.activeList[0])
   },
   methods: {
 

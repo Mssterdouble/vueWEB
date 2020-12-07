@@ -11,22 +11,19 @@
 
       <el-container>
         <el-header class="stick">
-          <el-tabs stretch v-model="tabIndex" @tab-click="handleClick">
+          <el-tabs stretch v-model="tabIndex" @tab-click="switchTab">
             <el-tab-pane label="主动" name="manuList"></el-tab-pane>
             <el-tab-pane label="被动" name="giftList"></el-tab-pane>
             <el-tab-pane label="自动" name="autoList"></el-tab-pane>
           </el-tabs>
         </el-header>
         <el-main class="main">
-          <div class="main-detail">
-            <el-card class="box-card" v-for="(item,index) in showList" :key="index">
-              <div>{{item.name}}</div>
-              <div v-for="(show,showIndex) in item.desc" :key="showIndex" class="text item">
-                {{show}}
-              </div>
+          <div class="main-detail" ref="showPanel">
+            <el-card class="card" v-for="(item,index) in showList" :key="index" :body-style="{ padding: '0px' }">
+              <div class="main-detail-skillName">{{item.name}}</div>
+              <div class="main-detail-skillContent" v-for="(show,showIndex) in item.desc" :key="showIndex">{{show}}</div>
             </el-card>
           </div>
-
         </el-main>
       </el-container>
     </el-container>
@@ -52,20 +49,25 @@ export default {
   },
 
   methods: {
-    handleClick (tab) {
+    switchTab (tab) {
       let temp = { 'giftList': this.giftList, 'manuList': this.manuList, 'autoList': this.autoList }
       this.showList = temp[tab.name]
+      this.reSetView()
     },
     switchHeros (index) {
       this.getDataDetal(index)
       let temp = { 'giftList': this.giftList, 'manuList': this.manuList, 'autoList': this.autoList }
       this.showList = temp[this.tabIndex]
+      this.reSetView()
     },
     getDataDetal (type) {
       let result = this.$mSQL.getHeroSkills(type)
       this.giftList = result.filter((item) => { return item.auto === '0' })
       this.autoList = result.filter((item) => { return item.auto === '-1' })
       this.manuList = result.filter((item) => { return item.auto === '1' })
+    },
+    reSetView () {
+      this.$refs.showPanel.scrollTop = 0
     }
   }
 }
@@ -90,8 +92,19 @@ export default {
   overflow: auto;
   overflow-y: scroll;
   font-size: 14px;
-}
 
+  &-skillName {
+    font-weight: bold;
+  }
+
+  &-skillContent {
+    font-size: 12px;
+  }
+}
+.card {
+  padding: 0 20px 0 20px;
+  margin: 5px;
+}
 .stick {
   position: -webkit-sticky;
   position: sticky;
