@@ -25,6 +25,21 @@ const mRouters = [
     component: () => import('@/pages/propety/heros')
   },
   {
+    name: 'Propety.Pets',
+    path: '/Propety.Pets',
+    component: () => import('@/pages/propety/pets')
+  },
+  {
+    name: 'Propety.Equip',
+    path: '/Propety.Equip',
+    component: () => import('@/pages/propety/equip')
+  },
+  {
+    name: 'Propety.Basepropety',
+    path: '/Propety.Basepropety',
+    component: () => import('@/pages/propety/basepropety')
+  },
+  {
     name: 'Test',
     path: '/Test',
     component: () => import('@/pages/test')

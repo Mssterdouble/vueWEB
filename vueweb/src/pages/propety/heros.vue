@@ -75,7 +75,7 @@ export default {
 
 <style lang="less" scope>
 .container {
-  height: 86vh;
+  height: 89vh;
 }
 .aside {
   width: 60px !important;

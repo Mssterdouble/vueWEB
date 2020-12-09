@@ -62,17 +62,19 @@ export default {
   },
   methods: {
     openByMenuId () {
+      let data = {
+        menuId: '1008007', // 固定登录id
+        closePage: true,
+        menuParams: {
+          needlogin: '1', // 登录标识
+          redictUrl: 'www.baidu.com' // 当前直播间url
+        }
+      }
+      window.alert(data)
       if (this.checkUA) {
         if (window.bridgeReady && window.bank && window.bank.browserPlugin) {
           console.log('------')
-          window.bank.browserPlugin.openByMenuId({
-            menuId: '1008007', // 固定登录id
-            menuParams: {
-              needlogin: '1', // 登录标识
-              closePage: true,
-              redictUrl: 'www.baidu.com' // 当前直播间url
-            }
-          })
+          window.bank.browserPlugin.openByMenuId(data)
         }
       }
     },

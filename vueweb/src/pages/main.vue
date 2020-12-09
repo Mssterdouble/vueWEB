@@ -31,8 +31,8 @@
         </div>
         <div class="panel-menu">
           <div class="panel-menu-title">
-            <div class="panel-menu-title-left">人物技能</div>
-            <div class="panel-menu-title-more" @click="peopleRoles">更多</div>
+            <div class="panel-menu-title-left">资料片</div>
+            <div class="panel-menu-title-more"></div>
           </div>
           <div class="panel-menu-docker">
             <div class="panel-menu-docker-item" :class="iconwidth" v-for="(item, index) in roles" :key='index' @click="gotoRoles(item)">
@@ -52,13 +52,13 @@ export default {
   data () {
     return {
       roles: [
-        { type: '修真', icon: require('@/assets/image/roles/comprehend.png'), link: 'comperhend' },
-        { type: '枪王', icon: require('@/assets/image/roles/gunking.png'), link: 'gunking' },
-        { type: '侠客', icon: require('@/assets/image/roles/kinight.png'), link: 'kinight' },
-        { type: '法师', icon: require('@/assets/image/roles/mage.png'), link: 'mage' },
-        { type: '贤者', icon: require('@/assets/image/roles/sage.png'), link: 'sage' },
-        { type: '武圣', icon: require('@/assets/image/roles/takebu.png'), link: 'takebu' },
-        { type: '战士', icon: require('@/assets/image/roles/warrior.png'), link: 'warrior' }
+        { type: '人物', icon: require('@/assets/image/roles/comprehend.png'), link: 'Propety.Heros' },
+        { type: '宠物', icon: require('@/assets/image/roles/gunking.png'), link: 'Propety.Pets' },
+        { type: '装备', icon: require('@/assets/image/roles/kinight.png'), link: 'Propety.Equip' },
+        { type: '属性', icon: require('@/assets/image/roles/mage.png'), link: 'Propety.Basepropety' },
+        // { type: '贤者', icon: require('@/assets/image/roles/sage.png'), link: 'sage' },
+        // { type: '武圣', icon: require('@/assets/image/roles/takebu.png'), link: 'takebu' },
+        // { type: '战士', icon: require('@/assets/image/roles/warrior.png'), link: 'warrior' }
       ],
       ads: [
         { type: '法师', icon: require('../assets/image/roles/mage.png'), link: 'mage' },
@@ -92,7 +92,7 @@ export default {
       this.$mRouter.push('Actives.Index')
     },
     gotoRoles (item) {
-      console.log(item)
+      this.$mRouter.push(item.link)
     },
     strategies () {
       this.$mRouter.push('Strategies.Index', { type: 'list' })
