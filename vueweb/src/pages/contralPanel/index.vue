@@ -1,5 +1,5 @@
 <template>
-  <m-page title="控制台">
+    <m-page title="控制台">
     世界OL盒子，内容管理台
   </m-page>
 </template>

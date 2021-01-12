@@ -106,11 +106,8 @@ export default {
   margin: 5px;
 }
 .stick {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 50px;
-  background-color: #fff;
-  height: 45px !important;
+  position: fixed;
+  top: 0;
 }
 
 .main {

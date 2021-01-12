@@ -20,6 +20,8 @@
     <div>window.bridgeReady:{{wbr}}</div>
     <div>window.bank:{{wb}}</div>
     <div>window.bank.browserPlugin:{{wbb}}</div>
+    <input type="text" v-model="inputurl">
+    {{target}}
   </div>
 </template>
 <script>
@@ -33,7 +35,8 @@ export default {
       isAndroid: false,
       wbr: false,
       wb: false,
-      wbb: false
+      wbb: false,
+      inputurl: 'https://wap.bank.ecitic.com/NMBFOServer/WebMB/MBWakeApp/wakeAppPage.html?VlWnQNU+zRddOpEhQvTmZRkGR/D29vAhgOmeYudIEaUx1rJP8uUKP1Nd7YUPOXt/CITICBANKLOGO'
     }
   },
 
@@ -58,7 +61,7 @@ export default {
     } else {
       console.log('不存在')
     }
-
+   this.target = this.inputurl.split('')[1].replace('CITICBANKLOGO','$')
   },
   methods: {
     openByMenuId () {
@@ -79,10 +82,11 @@ export default {
       }
     },
     openByScheme () {
+      let target = this.inputurl.split('')[1].replace('CITICBANKLOGO','$')
       if (this.isIos) {
-        window.location = 'citicbank:///?' + this.value
+        window.location = 'citicbank:///?' + this.target
       } else if (this.isAndroid) {
-        window.location = 'wakeupciticmobilebank://splashActivity:8899/citicbank?' + this.value
+        window.location = 'wakeupciticmobilebank://splashActivity:8899/citicbank?' + this.target
       }
     },
     openByScheme2 () {

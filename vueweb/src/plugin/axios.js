@@ -21,6 +21,15 @@ const mAxios = {
       result += "&" + name + "=" + encodeURIComponent(param[name])
     }
     return '?' + result.substring(1)
+  },
+  getTencentToken () {
+    return Axios.get('https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx7d142ff46bfe25cf&secret=APPSECRET')
+    .then(response => {
+      return response
+    })
+    .catch(function (error) { // 请求失败处理
+      return error
+    })
   }
 }
 
